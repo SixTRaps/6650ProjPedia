@@ -7,6 +7,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="285ex8jl8xKwfYXUUWhLUmI6KXa" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -72,7 +79,7 @@
       <workItem from="1650511120244" duration="683000" />
       <workItem from="1650560837309" duration="5607000" />
       <workItem from="1650577928209" duration="6092000" />
-      <workItem from="1650689525861" duration="665000" />
+      <workItem from="1650689525861" duration="15915000" />
     </task>
     <servers />
   </component>

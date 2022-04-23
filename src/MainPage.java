@@ -174,7 +174,7 @@ public class MainPage implements ActionListener {
 //                    if (getResponse.equalsIgnoreCase() )
                     String submitResponse = stub.put(key, value);
                     if (submitResponse.equals("Fail")) {
-                        JOptionPane.showMessageDialog(null, "Adding new entry failed", "alert", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Adding new entry failed due to too many servers crash. Please restart server and client", "alert", JOptionPane.ERROR_MESSAGE);
                         return;
                     }
                     else {
@@ -238,7 +238,7 @@ public class MainPage implements ActionListener {
                         try {
                             String submitResponse = stub.put(key, value);
                             if (submitResponse.equals("Fail")) {
-                                JOptionPane.showMessageDialog(null, "Edit entry failed", "alert", JOptionPane.ERROR_MESSAGE);
+                                JOptionPane.showMessageDialog(null, "Edit entry failed due to too many servers crash. Please restart server and client", "alert", JOptionPane.ERROR_MESSAGE);
                                 return;
                             }
                             else {
@@ -284,7 +284,7 @@ public class MainPage implements ActionListener {
                     return;
                 }
                 if (response.equals("Fail")) {
-                    JOptionPane.showMessageDialog(null, "Due to unknown reason, fail to delete the entry: " + key, "alert", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Fail to delete the entry: " + key + " due to too many servers crash. Please restart server and client", "alert", JOptionPane.ERROR_MESSAGE);
                 }
                 else if (response.equals("Success")) {
                     JOptionPane.showMessageDialog(null, "Successfully deleted the entry: " + key, "alert", JOptionPane.ERROR_MESSAGE);
@@ -292,21 +292,10 @@ public class MainPage implements ActionListener {
             }
         }
         else if (e.getSource() == logoutButton) {
-            try {
-                response = stub.logout(username);
-                if (response.equalsIgnoreCase("Logout successfully")) {
-                    frameMain.dispose();
-                    new WelcomePage();
-                }
-                else {
-                    JOptionPane.showMessageDialog(null, "Due to unknown reason, fail to log out.", "alert", JOptionPane.ERROR_MESSAGE);
-                    return;
-                }
-            } catch (Exception ex) {
-                JOptionPane.showMessageDialog(null, "Delete entry failed", "alert", JOptionPane.ERROR_MESSAGE);
-                return;
-            }
+            frameMain.dispose();
+            new WelcomePage();
         }
+
     }
 
 }

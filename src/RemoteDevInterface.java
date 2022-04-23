@@ -62,5 +62,10 @@ public interface RemoteDevInterface extends Remote {
      */
     public int commitUserChange() throws Exception;
 
-    void election() throws Exception;
+    public int changeCoordinator() throws Exception;
+    public String election() throws Exception;
+
+//    public int removeCoordinator() throws Exception;
+
+    public int removeMyCoordinator() throws Exception;
 }

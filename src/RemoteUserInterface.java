@@ -35,6 +35,4 @@ public interface RemoteUserInterface extends Remote {
     String login(String userName, String userPwd) throws Exception;
 
     String signup(String userName, String userPwd) throws Exception;
-
-    String logout(String userName) throws Exception;
 }

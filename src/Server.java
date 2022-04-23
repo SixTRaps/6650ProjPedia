@@ -12,10 +12,12 @@ public class Server implements RemoteDevInterface, RemoteUserInterface {
     private static final Logger logger = LogManager.getLogger(Server.class);
     private  ConcurrentHashMap<String, String> store;
     private int port;
+    private static int coordinatorIndex = 0;
     private String userAccountFileLocation = "./credential";
     private String dataFileLocation = "./data";
     private Map<String, String> userCredentials = new HashMap<>();
     private static RemoteDevInterface[] servers = new Server[5];
+    private static Server[] serverlist = new Server[5];
 
     // Jieren creates
     private boolean loginStatus;
@@ -30,7 +32,7 @@ public class Server implements RemoteDevInterface, RemoteUserInterface {
         loginUser = "";
         store = new ConcurrentHashMap<>();
         readUsersFromFolder();
-        readDataFromFolder();
+        validateData();
     }
 
     private void readUsersFromFolder() {
@@ -57,14 +59,68 @@ public class Server implements RemoteDevInterface, RemoteUserInterface {
         }
     }
 
-    // Read all txt files from the data folder
-    private void readDataFromFolder() {
+    private void validateData() {
         File folder = new File(dataFileLocation + "/" + this.port);
         if (!folder.exists()) {
             folder.mkdirs();
             return;
         }
         File[] entries = folder.listFiles();
+
+        if (entries.length == 0) return;
+        for (File entry: entries) {
+            String entryKey = entry.getName();
+            try {
+                InputStreamReader reader = new InputStreamReader(new FileInputStream(entry));
+                BufferedReader br = new BufferedReader(reader);
+                String line = br.readLine();
+                StringBuilder info = new StringBuilder(line);
+                // Read all information for each entry
+                while (line != null) {
+                    info.append("\n");
+                    line = br.readLine();
+                    if (line != null) info.append(line);
+                }
+                // Store the entry and the information into the map
+                for (int index = 0; index < 5; index++) {
+                    String folderPath = dataFileLocation + "/3200" + index;
+                    File otherFolder = new File(folderPath);
+                    if (!otherFolder.exists()) {
+                        otherFolder.mkdirs();
+                    }
+                    File writeName = new File(folderPath + "/" + entryKey);
+                    if (!writeName.exists() || !writeName.isFile()){
+                        writeName.createNewFile();
+                        BufferedWriter out = new BufferedWriter(new FileWriter(writeName));
+                        StringBuilder formatInfo = new StringBuilder();
+                        // Make the string in txt more beautiful
+                        for (int i = 0; i < info.length(); i++) {
+                            if (i > 0 && i % 120 == 0) formatInfo.append("\n");
+                            formatInfo.append(info.charAt(i));
+                        }
+                        out.write(formatInfo.toString());
+                        out.flush();
+                        out.close();
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+
+    }
+
+    // Read all txt files from the data folder
+    private void readDataFromFolder() {
+        File folder = new File(dataFileLocation + "/" + this.port);
+
+        if (!folder.exists()) {
+            folder.mkdirs();
+            return;
+        }
+        File[] entries = folder.listFiles();
+
         if (entries.length == 0) return;
         for (File entry: entries) {
             int length = entry.getName().length();
@@ -181,10 +237,49 @@ public class Server implements RemoteDevInterface, RemoteUserInterface {
         }
     }
 
+
     @Override
-    public void election() {
-        //TODO
-    };
+    public String election() {
+
+        while (coordinatorIndex < 4) {
+            int count = 0;
+            coordinatorIndex ++;
+            for (RemoteDevInterface ser: Server.servers) {
+                try {
+                    count += ser.changeCoordinator();
+
+                } catch (Exception ignored) {
+                    System.out.println("something wrong");
+                }
+            }
+            if (count >= 3) {
+                logger.info("Now choosing 3200" + coordinatorIndex + " as coordinator");
+                return "Success";
+            }
+        }
+        logger.info("Too many server fail. Restart!");
+        return "Fail";
+
+    }
+
+//    @Override
+    public static int removeCoordinator() throws Exception {
+
+        for (RemoteDevInterface ser: Server.serverlist) {
+            try {
+                ser.removeMyCoordinator();
+            } catch (Exception ignored) {}
+
+        }
+        return 0;
+    }
+
+    @Override
+    public int removeMyCoordinator() throws Exception {
+        myCoordinator = null;
+        return 1;
+    }
+
 
     @Override
     public String hasDataUpdate(int port, String update) throws Exception {
@@ -205,11 +300,7 @@ public class Server implements RemoteDevInterface, RemoteUserInterface {
     @Override
     public String get(String key) throws Exception {
         logger.info("Getting " + key + " from store");
-        System.out.println(store);
-        System.out.println(key);
-        System.out.println(store.containsKey(key));
         if (store.containsKey(key)) {
-            System.out.println(store.get(key));
             return store.get(key);
         } else {
             return "None";
@@ -219,7 +310,19 @@ public class Server implements RemoteDevInterface, RemoteUserInterface {
     @Override
     public String put(String key, String value) throws Exception {
         logger.info("Putting " + key + " with value " + value + " into store");
-        int notifyAndCommit = myCoordinator.coordinatorReceiveChange("put", key, value);
+        int notifyAndCommit = 0;
+        while (true) {
+            try {
+                notifyAndCommit = myCoordinator.coordinatorReceiveChange("put", key, value);
+                break;
+            } catch (Exception e) {
+                String res = election();
+                if (res.equals("Fail")) {
+                    return "Fail";
+                }
+            }
+        }
+
         if (notifyAndCommit == 0) {
             logger.error("Cannot notify the coordinator");
             return "Fail";
@@ -230,7 +333,18 @@ public class Server implements RemoteDevInterface, RemoteUserInterface {
     @Override
     public String delete(String key) throws Exception {
         logger.info("Deleting " + key + " from store");
-        int notifyAndCommit = myCoordinator.coordinatorReceiveChange("delete", key, "");
+        int notifyAndCommit = 0;
+        while (true) {
+            try {
+                notifyAndCommit = myCoordinator.coordinatorReceiveChange("delete", key, "");
+                break;
+            } catch (Exception e) {
+                String res = election();
+                if (res.equals("Fail")) {
+                    return "Fail";
+                }
+            }
+        }
         if (notifyAndCommit == 0) {
             logger.error("Cannot notify the coordinator");
             return "Fail";
@@ -253,18 +367,22 @@ public class Server implements RemoteDevInterface, RemoteUserInterface {
         while (times < 10) {
             int count = 0;
             for (RemoteDevInterface ser: servers) {
-                count += ser.otherServerReceiveChange(action, key, value);
+                try {
+                    count += ser.otherServerReceiveChange(action, key, value);
+                } catch (Exception ignored) {}
+
             }
-            if (count == 5) {
+            if (count >= 3) {
 
                 int commitTimes = 0;
                 while (commitTimes < 10) {
                     int commitCount = 0;
                     for (RemoteDevInterface ser: servers) {
-
-                        commitCount += ser.commitChange();
+                        try {
+                            commitCount += ser.commitChange();
+                        } catch (Exception ignored) {}
                     }
-                    if (commitCount == 5) {
+                    if (commitCount >= 3) {
                         return 1;
                     }
                     commitTimes++;
@@ -341,6 +459,18 @@ public class Server implements RemoteDevInterface, RemoteUserInterface {
     }
 
     @Override
+    public int changeCoordinator() throws Exception {
+        try {
+            this.myCoordinator = Server.serverlist[coordinatorIndex];
+            return 1;
+        } catch (Exception e) {
+            return 0;
+        }
+    }
+
+
+
+    @Override
     public String login(String userName, String userPwd) throws Exception {
         if (loginStatus) {
             return "Already login as " + loginUser + ". Please logout first";
@@ -370,17 +500,6 @@ public class Server implements RemoteDevInterface, RemoteUserInterface {
         
     }
 
-    @Override
-    public String logout(String userName) throws Exception {
-        if (loginStatus) {
-            loginStatus = false;
-            return "Logout successfully";
-        } else {
-            return "You are not log in. Please register or login";
-        }
-    }
-
-
     /**
      * Any server notify the coordinator via this function
      * @param action the action from the server
@@ -398,14 +517,14 @@ public class Server implements RemoteDevInterface, RemoteUserInterface {
             for (RemoteDevInterface ser: servers) {
                 count += ser.otherServerReceiveUserChange(action, key, value);
             }
-            if (count == 5) {
+            if (count >= 3) {
                 int commitTimes = 0;
                 while (commitTimes < 10) {
                     int commitCount = 0;
                     for (RemoteDevInterface ser: servers) {
                         commitCount += ser.commitUserChange();
                     }
-                    if (commitCount == 5) {
+                    if (commitCount >= 3) {
                         return 1;
                     }
                     commitTimes++;
@@ -472,7 +591,6 @@ public class Server implements RemoteDevInterface, RemoteUserInterface {
                 logger.info("Go: Server " + this.port + " successfully put " + pendingKey +" in to the store");
                 logger.info("Server " + + this.port + "'s store is" + this.store);
             } else {
-                System.out.println(this.store.containsKey(pendingKey));
                 if (this.store.containsKey(pendingKey)) {
                     this.store.remove(pendingKey);
                     deleteDataTxt(pendingKey);
@@ -492,9 +610,8 @@ public class Server implements RemoteDevInterface, RemoteUserInterface {
 
 
     public static void main(String[] args) {
-
         try {
-            Server[] serverlist = new Server[5];
+
             for (int i = 0; i < 5; i++) {
                     int port = 32000 + i;
                     serverlist[i] = new Server(port);
@@ -510,6 +627,48 @@ public class Server implements RemoteDevInterface, RemoteUserInterface {
                     LocateRegistry.getRegistry("localhost", 32004)};
             Server.servers = new RemoteDevInterface[] {(RemoteDevInterface) registriesClient[0].lookup("PROJPEDIA"), (RemoteDevInterface) registriesClient[1].lookup("PROJPEDIA"), (RemoteDevInterface) registriesClient[2].lookup("PROJPEDIA"),
                     (RemoteDevInterface) registriesClient[3].lookup("PROJPEDIA"), (RemoteDevInterface) registriesClient[4].lookup("PROJPEDIA")};
+            for (int i = 0; i < 5 ; i++) {
+                serverlist[i].readDataFromFolder();
+            }
+            Scanner input = new Scanner(System.in);
+            while (true) {
+                System.out.println("You can close the server you want to test fault tolerance");
+                System.out.println("Type one of the following choices: Close 0, Close 1, Close 2, Close 3, Close 4");
+                String action = input.nextLine();
+                switch (action) {
+                    case "Close 0" -> {
+                        UnicastRemoteObject.unexportObject(serverlist[0], true);
+                        System.out.println("You've close server 32000");
+                        Server.removeCoordinator();
+                    }
+                    case "Close 1" -> {
+                        UnicastRemoteObject.unexportObject(serverlist[1], true);
+                        System.out.println("You've close server 32001");
+                        Server.removeCoordinator();
+                    }
+                    case "Close 2" -> {
+                        UnicastRemoteObject.unexportObject(serverlist[2], true);
+                        System.out.println("You've close server 32002");
+                        Server.removeCoordinator();
+                    }
+                    case "Close 3" -> {
+                        UnicastRemoteObject.unexportObject(serverlist[3], true);
+                        System.out.println("You've close server 32003");
+                        Server.removeCoordinator();
+                    }
+                    case "Close 4" -> {
+                        UnicastRemoteObject.unexportObject(serverlist[4], true);
+                        System.out.println("You've close server 32004");
+                        Server.removeCoordinator();
+                    }
+                    default -> {
+                        System.out.println("Wrong input. Try again");
+                    }
+
+                }
+            }
+
+
 
         } catch (Exception e) {
         System.err.println("Server exception: " + e.toString());
