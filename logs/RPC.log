@@ -1,0 +1,545 @@
+2022-04-21 12:30:45,223 INFO Server [RMI TCP Connection(6)-192.168.50.131] Putting hello with value good
+life
+ into store
+2022-04-21 12:30:45,226 INFO Server [RMI TCP Connection(6)-192.168.50.131] Send put action to the coordinator
+2022-04-21 12:36:35,741 INFO Server [RMI TCP Connection(13)-192.168.50.131] Putting hello with value when you see some one,
+you want to show something nice
+ into store
+2022-04-21 12:36:35,743 INFO Server [RMI TCP Connection(13)-192.168.50.131] Send put action to the coordinator
+2022-04-21 12:36:35,749 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32004 has been acknowledged and added the new key hello
+2022-04-21 12:36:35,751 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32004 has been acknowledged and added the new key hello
+2022-04-21 12:36:35,753 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32004 has been acknowledged and added the new key hello
+2022-04-21 12:36:35,757 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32004 has been acknowledged and added the new key hello
+2022-04-21 12:36:35,758 INFO Server [RMI TCP Connection(18)-192.168.50.131] ACK: Server 32004 has been acknowledged and added the new key hello
+2022-04-21 12:36:35,762 INFO Server [RMI TCP Connection(14)-192.168.50.131] Go: Server 32004 successfully put hello in to the store
+2022-04-21 12:36:35,762 INFO Server [RMI TCP Connection(14)-192.168.50.131] Server 32004's store is{hello=when you see some one,
+you want to show something nice
+}
+2022-04-21 12:36:35,764 INFO Server [RMI TCP Connection(15)-192.168.50.131] Go: Server 32004 successfully put hello in to the store
+2022-04-21 12:36:35,765 INFO Server [RMI TCP Connection(15)-192.168.50.131] Server 32004's store is{hello=when you see some one,
+you want to show something nice
+}
+2022-04-21 12:36:35,767 INFO Server [RMI TCP Connection(16)-192.168.50.131] Go: Server 32004 successfully put hello in to the store
+2022-04-21 12:36:35,767 INFO Server [RMI TCP Connection(16)-192.168.50.131] Server 32004's store is{hello=when you see some one,
+you want to show something nice
+}
+2022-04-21 12:36:35,769 INFO Server [RMI TCP Connection(17)-192.168.50.131] Go: Server 32004 successfully put hello in to the store
+2022-04-21 12:36:35,770 INFO Server [RMI TCP Connection(17)-192.168.50.131] Server 32004's store is{hello=when you see some one,
+you want to show something nice
+}
+2022-04-21 12:36:35,771 INFO Server [RMI TCP Connection(18)-192.168.50.131] Go: Server 32004 successfully put hello in to the store
+2022-04-21 12:36:35,771 INFO Server [RMI TCP Connection(18)-192.168.50.131] Server 32004's store is{hello=when you see some one,
+you want to show something nice
+}
+2022-04-21 12:43:44,798 INFO Server [RMI TCP Connection(13)-192.168.50.131] Putting apple with value a fruit
+very delicious
+ into store
+2022-04-21 12:43:44,801 INFO Server [RMI TCP Connection(13)-192.168.50.131] Send put action to the coordinator
+2022-04-21 12:43:44,808 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32000 has been acknowledged and added the new key apple
+2022-04-21 12:43:44,810 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32001 has been acknowledged and added the new key apple
+2022-04-21 12:43:44,813 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32002 has been acknowledged and added the new key apple
+2022-04-21 12:43:44,815 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32003 has been acknowledged and added the new key apple
+2022-04-21 12:43:44,817 INFO Server [RMI TCP Connection(18)-192.168.50.131] ACK: Server 32004 has been acknowledged and added the new key apple
+2022-04-21 12:43:44,819 INFO Server [RMI TCP Connection(14)-192.168.50.131] Go: Server 32000 successfully put apple in to the store
+2022-04-21 12:43:44,819 INFO Server [RMI TCP Connection(14)-192.168.50.131] Server 32000's store is{apple=a fruit
+very delicious
+, hello=when you see some one,
+you want to show something nice
+}
+2022-04-21 12:43:44,820 INFO Server [RMI TCP Connection(15)-192.168.50.131] Go: Server 32001 successfully put apple in to the store
+2022-04-21 12:43:44,821 INFO Server [RMI TCP Connection(15)-192.168.50.131] Server 32001's store is{apple=a fruit
+very delicious
+, hello=when you see some one,
+you want to show something nice
+}
+2022-04-21 12:43:44,822 INFO Server [RMI TCP Connection(16)-192.168.50.131] Go: Server 32002 successfully put apple in to the store
+2022-04-21 12:43:44,822 INFO Server [RMI TCP Connection(16)-192.168.50.131] Server 32002's store is{apple=a fruit
+very delicious
+, hello=when you see some one,
+you want to show something nice
+}
+2022-04-21 12:43:44,823 INFO Server [RMI TCP Connection(17)-192.168.50.131] Go: Server 32003 successfully put apple in to the store
+2022-04-21 12:43:44,824 INFO Server [RMI TCP Connection(17)-192.168.50.131] Server 32003's store is{apple=a fruit
+very delicious
+, hello=when you see some one,
+you want to show something nice
+}
+2022-04-21 12:43:44,825 INFO Server [RMI TCP Connection(18)-192.168.50.131] Go: Server 32004 successfully put apple in to the store
+2022-04-21 12:43:44,825 INFO Server [RMI TCP Connection(18)-192.168.50.131] Server 32004's store is{apple=a fruit
+very delicious
+, hello=when you see some one,
+you want to show something nice
+}
+2022-04-21 13:25:39,564 INFO Server [RMI TCP Connection(12)-192.168.50.131] Putting user1 with value 123456 into store
+2022-04-21 13:25:39,566 INFO Server [RMI TCP Connection(12)-192.168.50.131] Send register action to the coordinator
+2022-04-21 13:25:39,572 INFO Server [RMI TCP Connection(13)-192.168.50.131] ACK: Server 32000 has been acknowledged and added the new key user1
+2022-04-21 13:25:39,575 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32001 has been acknowledged and added the new key user1
+2022-04-21 13:25:39,576 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32002 has been acknowledged and added the new key user1
+2022-04-21 13:25:39,579 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32003 has been acknowledged and added the new key user1
+2022-04-21 13:25:39,582 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32004 has been acknowledged and added the new key user1
+2022-04-21 13:25:39,583 INFO Server [RMI TCP Connection(13)-192.168.50.131] Go: Server 32000 successfully deleteuser1 in to the store
+2022-04-21 13:25:39,583 INFO Server [RMI TCP Connection(13)-192.168.50.131] Server 32000's store is{apple=a fruit
+very delicious
+, hello=when you see some one,
+you want to show something nice
+}
+2022-04-21 13:25:39,584 INFO Server [RMI TCP Connection(14)-192.168.50.131] Go: Server 32001 successfully deleteuser1 in to the store
+2022-04-21 13:25:39,584 INFO Server [RMI TCP Connection(14)-192.168.50.131] Server 32001's store is{apple=a fruit
+very delicious
+, hello=when you see some one,
+you want to show something nice
+}
+2022-04-21 13:25:39,585 INFO Server [RMI TCP Connection(15)-192.168.50.131] Go: Server 32002 successfully deleteuser1 in to the store
+2022-04-21 13:25:39,585 INFO Server [RMI TCP Connection(15)-192.168.50.131] Server 32002's store is{apple=a fruit
+very delicious
+, hello=when you see some one,
+you want to show something nice
+}
+2022-04-21 13:25:39,586 INFO Server [RMI TCP Connection(16)-192.168.50.131] Go: Server 32003 successfully deleteuser1 in to the store
+2022-04-21 13:25:39,587 INFO Server [RMI TCP Connection(16)-192.168.50.131] Server 32003's store is{apple=a fruit
+very delicious
+, hello=when you see some one,
+you want to show something nice
+}
+2022-04-21 13:25:39,588 INFO Server [RMI TCP Connection(17)-192.168.50.131] Go: Server 32004 successfully deleteuser1 in to the store
+2022-04-21 13:25:39,588 INFO Server [RMI TCP Connection(17)-192.168.50.131] Server 32004's store is{apple=a fruit
+very delicious
+, hello=when you see some one,
+you want to show something nice
+}
+2022-04-21 13:28:45,123 INFO Server [RMI TCP Connection(13)-192.168.50.131] Putting myuser with value 123456 into store
+2022-04-21 13:28:45,124 INFO Server [RMI TCP Connection(13)-192.168.50.131] Send register action to the coordinator
+2022-04-21 13:28:45,131 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32000 has been acknowledged and added the new key myuser
+2022-04-21 13:28:45,134 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32001 has been acknowledged and added the new key myuser
+2022-04-21 13:28:45,137 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32002 has been acknowledged and added the new key myuser
+2022-04-21 13:28:45,138 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32003 has been acknowledged and added the new key myuser
+2022-04-21 13:28:45,140 INFO Server [RMI TCP Connection(18)-192.168.50.131] ACK: Server 32004 has been acknowledged and added the new key myuser
+2022-04-21 13:28:45,143 INFO Server [RMI TCP Connection(14)-192.168.50.131] Go: Server 32000 successfully register myuser
+2022-04-21 13:28:45,144 INFO Server [RMI TCP Connection(15)-192.168.50.131] Go: Server 32001 successfully register myuser
+2022-04-21 13:28:45,145 INFO Server [RMI TCP Connection(16)-192.168.50.131] Go: Server 32002 successfully register myuser
+2022-04-21 13:28:45,145 INFO Server [RMI TCP Connection(17)-192.168.50.131] Go: Server 32003 successfully register myuser
+2022-04-21 13:28:45,146 INFO Server [RMI TCP Connection(18)-192.168.50.131] Go: Server 32004 successfully register myuser
+2022-04-21 13:32:40,583 INFO Server [RMI TCP Connection(12)-192.168.50.131] Putting andy with value 123456 into store
+2022-04-21 13:32:40,585 INFO Server [RMI TCP Connection(12)-192.168.50.131] Send register action to the coordinator
+2022-04-21 13:32:40,591 INFO Server [RMI TCP Connection(13)-192.168.50.131] ACK: Server 32000 has been acknowledged and added the new key andy
+2022-04-21 13:32:40,593 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32001 has been acknowledged and added the new key andy
+2022-04-21 13:32:40,595 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32002 has been acknowledged and added the new key andy
+2022-04-21 13:32:40,597 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32003 has been acknowledged and added the new key andy
+2022-04-21 13:32:40,600 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32004 has been acknowledged and added the new key andy
+2022-04-21 13:32:40,603 INFO Server [RMI TCP Connection(13)-192.168.50.131] Go: Server 32000 successfully register andy
+2022-04-21 13:32:40,604 INFO Server [RMI TCP Connection(14)-192.168.50.131] Go: Server 32001 successfully register andy
+2022-04-21 13:32:40,606 INFO Server [RMI TCP Connection(15)-192.168.50.131] Go: Server 32002 successfully register andy
+2022-04-21 13:32:40,607 INFO Server [RMI TCP Connection(16)-192.168.50.131] Go: Server 32003 successfully register andy
+2022-04-21 13:32:40,608 INFO Server [RMI TCP Connection(17)-192.168.50.131] Go: Server 32004 successfully register andy
+2022-04-21 14:52:39,671 INFO Server [RMI TCP Connection(12)-192.168.50.131] Putting account1 with value 12345 into store
+2022-04-21 14:52:39,673 INFO Server [RMI TCP Connection(12)-192.168.50.131] Send register action to the coordinator
+2022-04-21 14:52:39,678 INFO Server [RMI TCP Connection(13)-192.168.50.131] ACK: Server 32000 has been acknowledged and added the new key account1
+2022-04-21 14:52:39,681 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32001 has been acknowledged and added the new key account1
+2022-04-21 14:52:39,683 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32002 has been acknowledged and added the new key account1
+2022-04-21 14:52:39,687 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32003 has been acknowledged and added the new key account1
+2022-04-21 14:52:39,689 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32004 has been acknowledged and added the new key account1
+2022-04-21 14:52:39,691 INFO Server [RMI TCP Connection(13)-192.168.50.131] Go: Server 32000 successfully register account1
+2022-04-21 14:52:39,693 INFO Server [RMI TCP Connection(14)-192.168.50.131] Go: Server 32001 successfully register account1
+2022-04-21 14:52:39,694 INFO Server [RMI TCP Connection(15)-192.168.50.131] Go: Server 32002 successfully register account1
+2022-04-21 14:52:39,695 INFO Server [RMI TCP Connection(16)-192.168.50.131] Go: Server 32003 successfully register account1
+2022-04-21 14:52:39,696 INFO Server [RMI TCP Connection(17)-192.168.50.131] Go: Server 32004 successfully register account1
+2022-04-21 14:53:01,406 INFO Server [RMI TCP Connection(12)-192.168.50.131] Putting happy with value im good
+good
+ into store
+2022-04-21 14:53:01,410 INFO Server [RMI TCP Connection(12)-192.168.50.131] Send put action to the coordinator
+2022-04-21 14:53:01,413 INFO Server [RMI TCP Connection(13)-192.168.50.131] ACK: Server 32000 has been acknowledged and register the new key happy
+2022-04-21 14:53:01,415 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32001 has been acknowledged and register the new key happy
+2022-04-21 14:53:01,419 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32002 has been acknowledged and register the new key happy
+2022-04-21 14:53:01,420 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32003 has been acknowledged and register the new key happy
+2022-04-21 14:53:01,421 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32004 has been acknowledged and register the new key happy
+2022-04-21 14:54:21,884 INFO Server [RMI TCP Connection(12)-192.168.50.131] Putting account2 with value 1234 into store
+2022-04-21 14:54:21,886 INFO Server [RMI TCP Connection(12)-192.168.50.131] Send register action to the coordinator
+2022-04-21 14:54:21,892 INFO Server [RMI TCP Connection(13)-192.168.50.131] ACK: Server 32000 has been acknowledged and added the new key account2
+2022-04-21 14:54:21,894 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32001 has been acknowledged and added the new key account2
+2022-04-21 14:54:21,895 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32002 has been acknowledged and added the new key account2
+2022-04-21 14:54:21,899 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32003 has been acknowledged and added the new key account2
+2022-04-21 14:54:21,901 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32004 has been acknowledged and added the new key account2
+2022-04-21 14:54:21,903 INFO Server [RMI TCP Connection(13)-192.168.50.131] Go: Server 32000 successfully register account2
+2022-04-21 14:54:21,904 INFO Server [RMI TCP Connection(14)-192.168.50.131] Go: Server 32001 successfully register account2
+2022-04-21 14:54:21,905 INFO Server [RMI TCP Connection(15)-192.168.50.131] Go: Server 32002 successfully register account2
+2022-04-21 14:54:21,906 INFO Server [RMI TCP Connection(16)-192.168.50.131] Go: Server 32003 successfully register account2
+2022-04-21 14:54:21,908 INFO Server [RMI TCP Connection(17)-192.168.50.131] Go: Server 32004 successfully register account2
+2022-04-21 14:54:30,749 INFO Server [RMI TCP Connection(12)-192.168.50.131] Putting happy with value good
+ into store
+2022-04-21 14:54:30,753 INFO Server [RMI TCP Connection(12)-192.168.50.131] Send put action to the coordinator
+2022-04-21 14:54:30,757 INFO Server [RMI TCP Connection(13)-192.168.50.131] ACK: Server 32000 has been acknowledged and register the new key happy
+2022-04-21 14:54:30,759 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32001 has been acknowledged and register the new key happy
+2022-04-21 14:54:30,764 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32002 has been acknowledged and register the new key happy
+2022-04-21 14:54:30,766 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32003 has been acknowledged and register the new key happy
+2022-04-21 14:54:30,768 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32004 has been acknowledged and register the new key happy
+2022-04-21 14:56:18,912 INFO Server [RMI TCP Connection(12)-192.168.50.131] Putting ac3 with value 1234 into store
+2022-04-21 14:56:18,915 INFO Server [RMI TCP Connection(12)-192.168.50.131] Send register action to the coordinator
+2022-04-21 14:56:18,919 INFO Server [RMI TCP Connection(13)-192.168.50.131] ACK: Server 32000 has been acknowledged and added the new key ac3
+2022-04-21 14:56:18,923 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32001 has been acknowledged and added the new key ac3
+2022-04-21 14:56:18,926 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32002 has been acknowledged and added the new key ac3
+2022-04-21 14:56:18,928 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32003 has been acknowledged and added the new key ac3
+2022-04-21 14:56:18,929 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32004 has been acknowledged and added the new key ac3
+2022-04-21 14:56:18,932 INFO Server [RMI TCP Connection(13)-192.168.50.131] Go: Server 32000 successfully register ac3
+2022-04-21 14:56:18,932 INFO Server [RMI TCP Connection(14)-192.168.50.131] Go: Server 32001 successfully register ac3
+2022-04-21 14:56:18,933 INFO Server [RMI TCP Connection(15)-192.168.50.131] Go: Server 32002 successfully register ac3
+2022-04-21 14:56:18,935 INFO Server [RMI TCP Connection(16)-192.168.50.131] Go: Server 32003 successfully register ac3
+2022-04-21 14:56:18,936 INFO Server [RMI TCP Connection(17)-192.168.50.131] Go: Server 32004 successfully register ac3
+2022-04-21 14:56:25,378 INFO Server [RMI TCP Connection(12)-192.168.50.131] Putting apple with value good
+ into store
+2022-04-21 14:56:25,381 INFO Server [RMI TCP Connection(12)-192.168.50.131] Send put action to the coordinator
+2022-04-21 14:56:25,383 INFO Server [RMI TCP Connection(13)-192.168.50.131] ACK: Server 32000 has been acknowledged and register the new key apple
+2022-04-21 14:56:25,388 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32001 has been acknowledged and register the new key apple
+2022-04-21 14:56:25,390 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32002 has been acknowledged and register the new key apple
+2022-04-21 14:56:25,392 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32003 has been acknowledged and register the new key apple
+2022-04-21 14:56:25,393 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32004 has been acknowledged and register the new key apple
+2022-04-21 15:00:56,019 INFO Server [RMI TCP Connection(12)-192.168.50.131] Putting ac4 with value 1234 into store
+2022-04-21 15:00:56,020 INFO Server [RMI TCP Connection(12)-192.168.50.131] Send register action to the coordinator
+2022-04-21 15:00:56,024 INFO Server [RMI TCP Connection(2)-192.168.50.131] ACK: Server 32000 has been acknowledged and added the new key ac4
+2022-04-21 15:00:56,026 INFO Server [RMI TCP Connection(4)-192.168.50.131] ACK: Server 32001 has been acknowledged and added the new key ac4
+2022-04-21 15:00:56,027 INFO Server [RMI TCP Connection(6)-192.168.50.131] ACK: Server 32002 has been acknowledged and added the new key ac4
+2022-04-21 15:00:56,028 INFO Server [RMI TCP Connection(8)-192.168.50.131] ACK: Server 32003 has been acknowledged and added the new key ac4
+2022-04-21 15:00:56,030 INFO Server [RMI TCP Connection(10)-192.168.50.131] ACK: Server 32004 has been acknowledged and added the new key ac4
+2022-04-21 15:00:56,034 INFO Server [RMI TCP Connection(2)-192.168.50.131] Go: Server 32000 successfully register ac4
+2022-04-21 15:00:56,035 INFO Server [RMI TCP Connection(4)-192.168.50.131] Go: Server 32001 successfully register ac4
+2022-04-21 15:00:56,036 INFO Server [RMI TCP Connection(6)-192.168.50.131] Go: Server 32002 successfully register ac4
+2022-04-21 15:00:56,038 INFO Server [RMI TCP Connection(8)-192.168.50.131] Go: Server 32003 successfully register ac4
+2022-04-21 15:00:56,038 INFO Server [RMI TCP Connection(10)-192.168.50.131] Go: Server 32004 successfully register ac4
+2022-04-21 15:01:02,354 INFO Server [RMI TCP Connection(12)-192.168.50.131] Putting apple with value good
+ into store
+2022-04-21 15:01:02,357 INFO Server [RMI TCP Connection(12)-192.168.50.131] Send put action to the coordinator
+2022-04-21 15:01:02,359 INFO Server [RMI TCP Connection(2)-192.168.50.131] ACK: Server 32000 has been acknowledged and register the new key apple
+2022-04-21 15:01:02,361 INFO Server [RMI TCP Connection(4)-192.168.50.131] ACK: Server 32001 has been acknowledged and register the new key apple
+2022-04-21 15:01:02,364 INFO Server [RMI TCP Connection(6)-192.168.50.131] ACK: Server 32002 has been acknowledged and register the new key apple
+2022-04-21 15:01:02,365 INFO Server [RMI TCP Connection(8)-192.168.50.131] ACK: Server 32003 has been acknowledged and register the new key apple
+2022-04-21 15:01:02,366 INFO Server [RMI TCP Connection(10)-192.168.50.131] ACK: Server 32004 has been acknowledged and register the new key apple
+2022-04-21 16:08:31,035 INFO Server [RMI TCP Connection(13)-192.168.50.131] Putting u1 with value 123 into store
+2022-04-21 16:08:31,038 INFO Server [RMI TCP Connection(13)-192.168.50.131] Send register action to the coordinator
+2022-04-21 16:08:31,041 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32000 has been acknowledged and added the new key u1
+2022-04-21 16:08:31,043 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32001 has been acknowledged and added the new key u1
+2022-04-21 16:08:31,047 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32002 has been acknowledged and added the new key u1
+2022-04-21 16:08:31,050 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32003 has been acknowledged and added the new key u1
+2022-04-21 16:08:31,051 INFO Server [RMI TCP Connection(18)-192.168.50.131] ACK: Server 32004 has been acknowledged and added the new key u1
+2022-04-21 16:08:31,053 INFO Server [RMI TCP Connection(14)-192.168.50.131] Go: Server 32000 successfully register u1
+2022-04-21 16:08:31,055 INFO Server [RMI TCP Connection(15)-192.168.50.131] Go: Server 32001 successfully register u1
+2022-04-21 16:08:31,056 INFO Server [RMI TCP Connection(16)-192.168.50.131] Go: Server 32002 successfully register u1
+2022-04-21 16:08:31,057 INFO Server [RMI TCP Connection(17)-192.168.50.131] Go: Server 32003 successfully register u1
+2022-04-21 16:08:31,058 INFO Server [RMI TCP Connection(18)-192.168.50.131] Go: Server 32004 successfully register u1
+2022-04-21 16:08:43,952 INFO Server [RMI TCP Connection(13)-192.168.50.131] Putting apple with value is a good fruit
+ into store
+2022-04-21 16:08:43,955 INFO Server [RMI TCP Connection(13)-192.168.50.131] Send put action to the coordinator
+2022-04-21 16:08:43,958 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32000 has been acknowledged and register the new key apple
+2022-04-21 16:08:43,963 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32001 has been acknowledged and register the new key apple
+2022-04-21 16:08:43,966 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32002 has been acknowledged and register the new key apple
+2022-04-21 16:08:43,967 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32003 has been acknowledged and register the new key apple
+2022-04-21 16:08:43,969 INFO Server [RMI TCP Connection(18)-192.168.50.131] ACK: Server 32004 has been acknowledged and register the new key apple
+2022-04-21 16:10:41,641 INFO Server [RMI TCP Connection(12)-192.168.50.131] Putting u2 with value 123 into store
+2022-04-21 16:10:41,643 INFO Server [RMI TCP Connection(12)-192.168.50.131] Send register action to the coordinator
+2022-04-21 16:10:41,646 INFO Server [RMI TCP Connection(2)-192.168.50.131] ACK: Server 32000 has been acknowledged and added the new key u2
+2022-04-21 16:10:41,648 INFO Server [RMI TCP Connection(4)-192.168.50.131] ACK: Server 32001 has been acknowledged and added the new key u2
+2022-04-21 16:10:41,650 INFO Server [RMI TCP Connection(6)-192.168.50.131] ACK: Server 32002 has been acknowledged and added the new key u2
+2022-04-21 16:10:41,652 INFO Server [RMI TCP Connection(8)-192.168.50.131] ACK: Server 32003 has been acknowledged and added the new key u2
+2022-04-21 16:10:41,656 INFO Server [RMI TCP Connection(10)-192.168.50.131] ACK: Server 32004 has been acknowledged and added the new key u2
+2022-04-21 16:10:41,659 INFO Server [RMI TCP Connection(2)-192.168.50.131] Go: Server 32000 successfully register u2
+2022-04-21 16:10:41,661 INFO Server [RMI TCP Connection(4)-192.168.50.131] Go: Server 32001 successfully register u2
+2022-04-21 16:10:41,661 INFO Server [RMI TCP Connection(6)-192.168.50.131] Go: Server 32002 successfully register u2
+2022-04-21 16:10:41,662 INFO Server [RMI TCP Connection(8)-192.168.50.131] Go: Server 32003 successfully register u2
+2022-04-21 16:10:41,664 INFO Server [RMI TCP Connection(10)-192.168.50.131] Go: Server 32004 successfully register u2
+2022-04-21 16:10:58,496 INFO Server [RMI TCP Connection(12)-192.168.50.131] Putting what with value something
+good
+ into store
+2022-04-21 16:10:58,501 INFO Server [RMI TCP Connection(12)-192.168.50.131] Send put action to the coordinator
+2022-04-21 16:10:58,505 INFO Server [RMI TCP Connection(13)-192.168.50.131] ACK: Server 32000 has been acknowledged and register the new key what
+2022-04-21 16:10:58,509 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32001 has been acknowledged and register the new key what
+2022-04-21 16:10:58,519 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32002 has been acknowledged and register the new key what
+2022-04-21 16:10:58,520 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32003 has been acknowledged and register the new key what
+2022-04-21 16:10:58,523 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32004 has been acknowledged and register the new key what
+2022-04-21 16:12:13,176 INFO Server [RMI TCP Connection(12)-192.168.50.131] Putting u3 with value what into store
+2022-04-21 16:12:13,178 INFO Server [RMI TCP Connection(12)-192.168.50.131] Send register action to the coordinator
+2022-04-21 16:12:13,183 INFO Server [RMI TCP Connection(13)-192.168.50.131] ACK: Server 32000 has been acknowledged and added the new key u3
+2022-04-21 16:12:13,185 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32001 has been acknowledged and added the new key u3
+2022-04-21 16:12:13,187 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32002 has been acknowledged and added the new key u3
+2022-04-21 16:12:13,192 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32003 has been acknowledged and added the new key u3
+2022-04-21 16:12:13,194 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32004 has been acknowledged and added the new key u3
+2022-04-21 16:12:13,197 INFO Server [RMI TCP Connection(13)-192.168.50.131] Go: Server 32000 successfully register u3
+2022-04-21 16:12:13,199 INFO Server [RMI TCP Connection(14)-192.168.50.131] Go: Server 32001 successfully register u3
+2022-04-21 16:12:13,200 INFO Server [RMI TCP Connection(15)-192.168.50.131] Go: Server 32002 successfully register u3
+2022-04-21 16:12:13,201 INFO Server [RMI TCP Connection(16)-192.168.50.131] Go: Server 32003 successfully register u3
+2022-04-21 16:12:13,202 INFO Server [RMI TCP Connection(17)-192.168.50.131] Go: Server 32004 successfully register u3
+2022-04-21 16:12:24,061 INFO Server [RMI TCP Connection(12)-192.168.50.131] Putting haha with value something
+ into store
+2022-04-21 16:12:24,065 INFO Server [RMI TCP Connection(12)-192.168.50.131] Send put action to the coordinator
+2022-04-21 16:12:24,068 INFO Server [RMI TCP Connection(13)-192.168.50.131] ACK: Server 32000 has been acknowledged and register the new key haha
+2022-04-21 16:12:24,069 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32001 has been acknowledged and register the new key haha
+2022-04-21 16:12:24,073 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32002 has been acknowledged and register the new key haha
+2022-04-21 16:12:24,075 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32003 has been acknowledged and register the new key haha
+2022-04-21 16:12:24,077 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32004 has been acknowledged and register the new key haha
+2022-04-21 16:15:47,404 INFO Server [RMI TCP Connection(12)-192.168.50.131] Putting u10 with value good into store
+2022-04-21 16:15:47,406 INFO Server [RMI TCP Connection(12)-192.168.50.131] Send register action to the coordinator
+2022-04-21 16:15:47,411 INFO Server [RMI TCP Connection(13)-192.168.50.131] ACK: Server 32000 has been acknowledged and added the new key u10
+2022-04-21 16:15:47,414 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32001 has been acknowledged and added the new key u10
+2022-04-21 16:15:47,419 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32002 has been acknowledged and added the new key u10
+2022-04-21 16:15:47,421 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32003 has been acknowledged and added the new key u10
+2022-04-21 16:15:47,423 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32004 has been acknowledged and added the new key u10
+2022-04-21 16:15:47,426 INFO Server [RMI TCP Connection(13)-192.168.50.131] Go: Server 32000 successfully register u10
+2022-04-21 16:15:47,428 INFO Server [RMI TCP Connection(14)-192.168.50.131] Go: Server 32001 successfully register u10
+2022-04-21 16:15:47,429 INFO Server [RMI TCP Connection(15)-192.168.50.131] Go: Server 32002 successfully register u10
+2022-04-21 16:15:47,430 INFO Server [RMI TCP Connection(16)-192.168.50.131] Go: Server 32003 successfully register u10
+2022-04-21 16:15:47,431 INFO Server [RMI TCP Connection(17)-192.168.50.131] Go: Server 32004 successfully register u10
+2022-04-21 16:15:58,273 INFO Server [RMI TCP Connection(12)-192.168.50.131] Putting apple with value  very nice
+
+ into store
+2022-04-21 16:15:58,276 INFO Server [RMI TCP Connection(12)-192.168.50.131] Send put action to the coordinator
+2022-04-21 16:15:58,279 INFO Server [RMI TCP Connection(13)-192.168.50.131] ACK: Server 32000 has been acknowledged and register the new key apple
+2022-04-21 16:15:58,287 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32001 has been acknowledged and register the new key apple
+2022-04-21 16:15:58,291 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32002 has been acknowledged and register the new key apple
+2022-04-21 16:15:58,293 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32003 has been acknowledged and register the new key apple
+2022-04-21 16:15:58,294 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32004 has been acknowledged and register the new key apple
+2022-04-21 16:15:58,302 INFO Server [RMI TCP Connection(13)-192.168.50.131] Go: Server 32000 successfully put apple in to the store
+2022-04-21 16:15:58,303 INFO Server [RMI TCP Connection(13)-192.168.50.131] Server 32000's store is{apple= very nice
+
+, myuser=123456
+, hello=when you see some one,
+you want to show something nice
+}
+2022-04-21 16:15:58,304 INFO Server [RMI TCP Connection(14)-192.168.50.131] Go: Server 32001 successfully put apple in to the store
+2022-04-21 16:15:58,305 INFO Server [RMI TCP Connection(14)-192.168.50.131] Server 32001's store is{apple= very nice
+
+, myuser=123456
+, hello=when you see some one,
+you want to show something nice
+}
+2022-04-21 16:15:58,307 INFO Server [RMI TCP Connection(15)-192.168.50.131] Go: Server 32002 successfully put apple in to the store
+2022-04-21 16:15:58,307 INFO Server [RMI TCP Connection(15)-192.168.50.131] Server 32002's store is{apple= very nice
+
+, myuser=123456
+, hello=when you see some one,
+you want to show something nice
+}
+2022-04-21 16:15:58,309 INFO Server [RMI TCP Connection(16)-192.168.50.131] Go: Server 32003 successfully put apple in to the store
+2022-04-21 16:15:58,309 INFO Server [RMI TCP Connection(16)-192.168.50.131] Server 32003's store is{apple= very nice
+
+, myuser=123456
+, hello=when you see some one,
+you want to show something nice
+}
+2022-04-21 16:15:58,310 INFO Server [RMI TCP Connection(17)-192.168.50.131] Go: Server 32004 successfully put apple in to the store
+2022-04-21 16:15:58,310 INFO Server [RMI TCP Connection(17)-192.168.50.131] Server 32004's store is{apple= very nice
+
+, myuser=123456
+, hello=when you see some one,
+you want to show something nice
+}
+2022-04-21 16:19:22,907 INFO Server [RMI TCP Connection(12)-192.168.50.131] Putting myaccount with value 12345 into store
+2022-04-21 16:19:22,909 INFO Server [RMI TCP Connection(12)-192.168.50.131] Send register action to the coordinator
+2022-04-21 16:19:22,915 INFO Server [RMI TCP Connection(13)-192.168.50.131] ACK: Server 32000 has been acknowledged and added the new key myaccount
+2022-04-21 16:19:22,917 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32001 has been acknowledged and added the new key myaccount
+2022-04-21 16:19:22,919 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32002 has been acknowledged and added the new key myaccount
+2022-04-21 16:19:22,923 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32003 has been acknowledged and added the new key myaccount
+2022-04-21 16:19:22,924 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32004 has been acknowledged and added the new key myaccount
+2022-04-21 16:19:22,926 INFO Server [RMI TCP Connection(13)-192.168.50.131] Go: Server 32000 successfully register myaccount
+2022-04-21 16:19:22,927 INFO Server [RMI TCP Connection(14)-192.168.50.131] Go: Server 32001 successfully register myaccount
+2022-04-21 16:19:22,929 INFO Server [RMI TCP Connection(15)-192.168.50.131] Go: Server 32002 successfully register myaccount
+2022-04-21 16:19:22,930 INFO Server [RMI TCP Connection(16)-192.168.50.131] Go: Server 32003 successfully register myaccount
+2022-04-21 16:19:22,930 INFO Server [RMI TCP Connection(17)-192.168.50.131] Go: Server 32004 successfully register myaccount
+2022-04-21 16:19:40,850 INFO Server [RMI TCP Connection(18)-192.168.50.131] Putting apple with value tastgood
+healthy
+ into store
+2022-04-21 16:19:40,853 INFO Server [RMI TCP Connection(18)-192.168.50.131] Send put action to the coordinator
+2022-04-21 16:19:40,855 INFO Server [RMI TCP Connection(13)-192.168.50.131] ACK: Server 32000 has been acknowledged and register the new key apple
+2022-04-21 16:19:40,858 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32001 has been acknowledged and register the new key apple
+2022-04-21 16:19:40,863 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32002 has been acknowledged and register the new key apple
+2022-04-21 16:19:40,864 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32003 has been acknowledged and register the new key apple
+2022-04-21 16:19:40,866 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32004 has been acknowledged and register the new key apple
+2022-04-21 16:19:40,872 INFO Server [RMI TCP Connection(13)-192.168.50.131] Go: Server 32000 successfully put apple in to the store
+2022-04-21 16:19:40,873 INFO Server [RMI TCP Connection(13)-192.168.50.131] Server 32000's store is{apple=tastgood
+healthy
+}
+2022-04-21 16:19:40,875 INFO Server [RMI TCP Connection(14)-192.168.50.131] Go: Server 32001 successfully put apple in to the store
+2022-04-21 16:19:40,875 INFO Server [RMI TCP Connection(14)-192.168.50.131] Server 32001's store is{apple=tastgood
+healthy
+}
+2022-04-21 16:19:40,877 INFO Server [RMI TCP Connection(15)-192.168.50.131] Go: Server 32002 successfully put apple in to the store
+2022-04-21 16:19:40,877 INFO Server [RMI TCP Connection(15)-192.168.50.131] Server 32002's store is{apple=tastgood
+healthy
+}
+2022-04-21 16:19:40,879 INFO Server [RMI TCP Connection(16)-192.168.50.131] Go: Server 32003 successfully put apple in to the store
+2022-04-21 16:19:40,879 INFO Server [RMI TCP Connection(16)-192.168.50.131] Server 32003's store is{apple=tastgood
+healthy
+}
+2022-04-21 16:19:40,880 INFO Server [RMI TCP Connection(17)-192.168.50.131] Go: Server 32004 successfully put apple in to the store
+2022-04-21 16:19:40,881 INFO Server [RMI TCP Connection(17)-192.168.50.131] Server 32004's store is{apple=tastgood
+healthy
+}
+2022-04-21 16:20:59,284 INFO Server [RMI TCP Connection(20)-192.168.50.131] Getting 1 from store
+2022-04-21 16:21:09,895 INFO Server [RMI TCP Connection(20)-192.168.50.131] Getting apple from store
+2022-04-21 16:39:55,651 INFO Server [RMI TCP Connection(23)-192.168.50.131] Getting apple from store
+2022-04-21 16:41:46,805 INFO Server [RMI TCP Connection(12)-192.168.50.131] Getting apple from store
+2022-04-21 16:43:23,925 INFO Server [RMI TCP Connection(12)-192.168.50.131] Getting apple from store
+2022-04-21 16:44:17,505 INFO Server [RMI TCP Connection(12)-192.168.50.131] Getting apple from store
+2022-04-21 16:45:09,953 INFO Server [RMI TCP Connection(12)-192.168.50.131] Getting apple from store
+2022-04-21 17:39:05,815 INFO Server [RMI TCP Connection(74)-192.168.50.131] Deleting apple from store
+2022-04-21 17:39:05,819 INFO Server [RMI TCP Connection(74)-192.168.50.131] Send delete action to the coordinator
+2022-04-21 17:39:05,828 INFO Server [RMI TCP Connection(75)-192.168.50.131] ACK: Server 32000 has been acknowledged and register the new key apple
+2022-04-21 17:39:05,832 INFO Server [RMI TCP Connection(76)-192.168.50.131] ACK: Server 32001 has been acknowledged and register the new key apple
+2022-04-21 17:39:05,835 INFO Server [RMI TCP Connection(77)-192.168.50.131] ACK: Server 32002 has been acknowledged and register the new key apple
+2022-04-21 17:39:05,837 INFO Server [RMI TCP Connection(78)-192.168.50.131] ACK: Server 32003 has been acknowledged and register the new key apple
+2022-04-21 17:39:05,839 INFO Server [RMI TCP Connection(79)-192.168.50.131] ACK: Server 32004 has been acknowledged and register the new key apple
+2022-04-21 17:39:05,842 INFO Server [RMI TCP Connection(75)-192.168.50.131] Go: Server 32000 successfully deleteapple in to the store
+2022-04-21 17:39:05,843 INFO Server [RMI TCP Connection(75)-192.168.50.131] Server 32000's store is{apple=tastgood
+healthy
+}
+2022-04-21 17:39:05,843 INFO Server [RMI TCP Connection(76)-192.168.50.131] Go: Server 32001 successfully deleteapple in to the store
+2022-04-21 17:39:05,843 INFO Server [RMI TCP Connection(76)-192.168.50.131] Server 32001's store is{apple=tastgood
+healthy
+}
+2022-04-21 17:39:05,844 INFO Server [RMI TCP Connection(77)-192.168.50.131] Go: Server 32002 successfully deleteapple in to the store
+2022-04-21 17:39:05,844 INFO Server [RMI TCP Connection(77)-192.168.50.131] Server 32002's store is{apple=tastgood
+healthy
+}
+2022-04-21 17:39:05,844 INFO Server [RMI TCP Connection(78)-192.168.50.131] Go: Server 32003 successfully deleteapple in to the store
+2022-04-21 17:39:05,845 INFO Server [RMI TCP Connection(78)-192.168.50.131] Server 32003's store is{apple=tastgood
+healthy
+}
+2022-04-21 17:39:05,849 INFO Server [RMI TCP Connection(79)-192.168.50.131] Go: Server 32004 successfully deleteapple in to the store
+2022-04-21 17:39:05,849 INFO Server [RMI TCP Connection(79)-192.168.50.131] Server 32004's store is{apple=tastgood
+healthy
+}
+2022-04-21 17:44:40,471 INFO Server [RMI TCP Connection(12)-192.168.50.131] Deleting apple from store
+2022-04-21 17:44:40,473 INFO Server [RMI TCP Connection(12)-192.168.50.131] Send delete action to the coordinator
+2022-04-21 17:44:40,476 INFO Server [RMI TCP Connection(13)-192.168.50.131] ACK: Server 32000 has been acknowledged and register the new key apple
+2022-04-21 17:44:40,479 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32001 has been acknowledged and register the new key apple
+2022-04-21 17:44:40,482 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32002 has been acknowledged and register the new key apple
+2022-04-21 17:44:40,486 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32003 has been acknowledged and register the new key apple
+2022-04-21 17:44:40,488 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32004 has been acknowledged and register the new key apple
+2022-04-21 17:44:40,489 INFO Server [RMI TCP Connection(13)-192.168.50.131] Server 32000's store is{apple=tastgood
+healthy
+}
+2022-04-21 17:44:40,491 INFO Server [RMI TCP Connection(14)-192.168.50.131] Server 32001's store is{apple=tastgood
+healthy
+}
+2022-04-21 17:44:40,492 INFO Server [RMI TCP Connection(15)-192.168.50.131] Server 32002's store is{apple=tastgood
+healthy
+}
+2022-04-21 17:44:40,492 INFO Server [RMI TCP Connection(16)-192.168.50.131] Server 32003's store is{apple=tastgood
+healthy
+}
+2022-04-21 17:44:40,493 INFO Server [RMI TCP Connection(17)-192.168.50.131] Server 32004's store is{apple=tastgood
+healthy
+}
+2022-04-21 17:45:24,939 INFO Server [RMI TCP Connection(12)-192.168.50.131] Deleting apple from store
+2022-04-21 17:45:24,941 INFO Server [RMI TCP Connection(12)-192.168.50.131] Send delete action to the coordinator
+2022-04-21 17:45:24,945 INFO Server [RMI TCP Connection(13)-192.168.50.131] ACK: Server 32000 has been acknowledged and register the new key apple
+2022-04-21 17:45:24,947 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32001 has been acknowledged and register the new key apple
+2022-04-21 17:45:24,950 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32002 has been acknowledged and register the new key apple
+2022-04-21 17:45:24,952 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32003 has been acknowledged and register the new key apple
+2022-04-21 17:45:24,954 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32004 has been acknowledged and register the new key apple
+2022-04-21 17:45:24,975 INFO Server [RMI TCP Connection(13)-192.168.50.131] Go: Server 32000 successfully deleteapple in to the store
+2022-04-21 17:45:24,976 INFO Server [RMI TCP Connection(13)-192.168.50.131] Server 32000's store is{}
+2022-04-21 17:45:24,977 INFO Server [RMI TCP Connection(14)-192.168.50.131] Server 32001's store is{}
+2022-04-21 17:45:24,977 INFO Server [RMI TCP Connection(15)-192.168.50.131] Server 32002's store is{}
+2022-04-21 17:45:24,978 INFO Server [RMI TCP Connection(16)-192.168.50.131] Server 32003's store is{}
+2022-04-21 17:45:24,978 INFO Server [RMI TCP Connection(17)-192.168.50.131] Server 32004's store is{}
+2022-04-21 17:53:31,619 INFO Server [RMI TCP Connection(13)-192.168.50.131] Putting apple with value a fruit 
+very nice
+ into store
+2022-04-21 17:53:31,621 INFO Server [RMI TCP Connection(13)-192.168.50.131] Send put action to the coordinator
+2022-04-21 17:53:31,625 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32000 has been acknowledged -- apple
+2022-04-21 17:53:31,628 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32001 has been acknowledged -- apple
+2022-04-21 17:53:31,630 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32002 has been acknowledged -- apple
+2022-04-21 17:53:31,634 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32003 has been acknowledged -- apple
+2022-04-21 17:53:31,636 INFO Server [RMI TCP Connection(18)-192.168.50.131] ACK: Server 32004 has been acknowledged -- apple
+2022-04-21 17:53:31,638 INFO Server [RMI TCP Connection(14)-192.168.50.131] Go: Server 32000 successfully put apple in to the store
+2022-04-21 17:53:31,639 INFO Server [RMI TCP Connection(14)-192.168.50.131] Server 32000's store is{apple=a fruit 
+very nice
+}
+2022-04-21 17:53:31,641 INFO Server [RMI TCP Connection(15)-192.168.50.131] Go: Server 32001 successfully put apple in to the store
+2022-04-21 17:53:31,641 INFO Server [RMI TCP Connection(15)-192.168.50.131] Server 32001's store is{apple=a fruit 
+very nice
+}
+2022-04-21 17:53:31,642 INFO Server [RMI TCP Connection(16)-192.168.50.131] Go: Server 32002 successfully put apple in to the store
+2022-04-21 17:53:31,642 INFO Server [RMI TCP Connection(16)-192.168.50.131] Server 32002's store is{apple=a fruit 
+very nice
+}
+2022-04-21 17:53:31,643 INFO Server [RMI TCP Connection(17)-192.168.50.131] Go: Server 32003 successfully put apple in to the store
+2022-04-21 17:53:31,644 INFO Server [RMI TCP Connection(17)-192.168.50.131] Server 32003's store is{apple=a fruit 
+very nice
+}
+2022-04-21 17:53:31,645 INFO Server [RMI TCP Connection(18)-192.168.50.131] Go: Server 32004 successfully put apple in to the store
+2022-04-21 17:53:31,645 INFO Server [RMI TCP Connection(18)-192.168.50.131] Server 32004's store is{apple=a fruit 
+very nice
+}
+2022-04-21 17:53:36,920 INFO Server [RMI TCP Connection(13)-192.168.50.131] Deleting apple from store
+2022-04-21 17:53:36,921 INFO Server [RMI TCP Connection(13)-192.168.50.131] Send delete action to the coordinator
+2022-04-21 17:53:36,923 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32000 has been acknowledged -- apple
+2022-04-21 17:53:36,926 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32001 has been acknowledged -- apple
+2022-04-21 17:53:36,931 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32002 has been acknowledged -- apple
+2022-04-21 17:53:36,934 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32003 has been acknowledged -- apple
+2022-04-21 17:53:36,936 INFO Server [RMI TCP Connection(18)-192.168.50.131] ACK: Server 32004 has been acknowledged -- apple
+2022-04-21 17:53:36,962 INFO Server [RMI TCP Connection(14)-192.168.50.131] Go: Server 32000 successfully deleteapple in to the store
+2022-04-21 17:53:36,964 INFO Server [RMI TCP Connection(14)-192.168.50.131] Server 32000's store is{}
+2022-04-21 17:53:36,965 INFO Server [RMI TCP Connection(15)-192.168.50.131] Go: Server 32001 successfully deleteapple in to the store
+2022-04-21 17:53:36,966 INFO Server [RMI TCP Connection(15)-192.168.50.131] Server 32001's store is{}
+2022-04-21 17:53:36,966 INFO Server [RMI TCP Connection(16)-192.168.50.131] Go: Server 32002 successfully deleteapple in to the store
+2022-04-21 17:53:36,966 INFO Server [RMI TCP Connection(16)-192.168.50.131] Server 32002's store is{}
+2022-04-21 17:53:36,967 INFO Server [RMI TCP Connection(17)-192.168.50.131] Go: Server 32003 successfully deleteapple in to the store
+2022-04-21 17:53:36,967 INFO Server [RMI TCP Connection(17)-192.168.50.131] Server 32003's store is{}
+2022-04-21 17:53:36,968 INFO Server [RMI TCP Connection(18)-192.168.50.131] Go: Server 32004 successfully deleteapple in to the store
+2022-04-21 17:53:36,968 INFO Server [RMI TCP Connection(18)-192.168.50.131] Server 32004's store is{}
+2022-04-21 17:54:04,475 INFO Server [RMI TCP Connection(19)-192.168.50.131] Putting apple with value a goo fruit
+tasty
+ into store
+2022-04-21 17:54:04,485 INFO Server [RMI TCP Connection(19)-192.168.50.131] Send put action to the coordinator
+2022-04-21 17:54:04,491 INFO Server [RMI TCP Connection(20)-192.168.50.131] ACK: Server 32000 has been acknowledged -- apple
+2022-04-21 17:54:04,511 INFO Server [RMI TCP Connection(21)-192.168.50.131] ACK: Server 32001 has been acknowledged -- apple
+2022-04-21 17:54:04,529 INFO Server [RMI TCP Connection(22)-192.168.50.131] ACK: Server 32002 has been acknowledged -- apple
+2022-04-21 17:54:04,533 INFO Server [RMI TCP Connection(23)-192.168.50.131] ACK: Server 32003 has been acknowledged -- apple
+2022-04-21 17:54:04,534 INFO Server [RMI TCP Connection(24)-192.168.50.131] ACK: Server 32004 has been acknowledged -- apple
+2022-04-21 17:54:04,539 INFO Server [RMI TCP Connection(20)-192.168.50.131] Go: Server 32000 successfully put apple in to the store
+2022-04-21 17:54:04,539 INFO Server [RMI TCP Connection(20)-192.168.50.131] Server 32000's store is{apple=a goo fruit
+tasty
+}
+2022-04-21 17:54:04,542 INFO Server [RMI TCP Connection(21)-192.168.50.131] Go: Server 32001 successfully put apple in to the store
+2022-04-21 17:54:04,543 INFO Server [RMI TCP Connection(21)-192.168.50.131] Server 32001's store is{apple=a goo fruit
+tasty
+}
+2022-04-21 17:54:04,544 INFO Server [RMI TCP Connection(22)-192.168.50.131] Go: Server 32002 successfully put apple in to the store
+2022-04-21 17:54:04,544 INFO Server [RMI TCP Connection(22)-192.168.50.131] Server 32002's store is{apple=a goo fruit
+tasty
+}
+2022-04-21 17:54:04,545 INFO Server [RMI TCP Connection(23)-192.168.50.131] Go: Server 32003 successfully put apple in to the store
+2022-04-21 17:54:04,550 INFO Server [RMI TCP Connection(23)-192.168.50.131] Server 32003's store is{apple=a goo fruit
+tasty
+}
+2022-04-21 17:54:04,555 INFO Server [RMI TCP Connection(24)-192.168.50.131] Go: Server 32004 successfully put apple in to the store
+2022-04-21 17:54:04,555 INFO Server [RMI TCP Connection(24)-192.168.50.131] Server 32004's store is{apple=a goo fruit
+tasty
+}
+2022-04-21 17:54:41,728 INFO Server [RMI TCP Connection(25)-192.168.50.131] Deleting apple from store
+2022-04-21 17:54:41,731 INFO Server [RMI TCP Connection(25)-192.168.50.131] Send delete action to the coordinator
+2022-04-21 17:54:41,737 INFO Server [RMI TCP Connection(20)-192.168.50.131] ACK: Server 32000 has been acknowledged -- apple
+2022-04-21 17:54:41,740 INFO Server [RMI TCP Connection(21)-192.168.50.131] ACK: Server 32001 has been acknowledged -- apple
+2022-04-21 17:54:41,741 INFO Server [RMI TCP Connection(22)-192.168.50.131] ACK: Server 32002 has been acknowledged -- apple
+2022-04-21 17:54:41,742 INFO Server [RMI TCP Connection(23)-192.168.50.131] ACK: Server 32003 has been acknowledged -- apple
+2022-04-21 17:54:41,742 INFO Server [RMI TCP Connection(24)-192.168.50.131] ACK: Server 32004 has been acknowledged -- apple
+2022-04-21 17:54:41,745 INFO Server [RMI TCP Connection(20)-192.168.50.131] Go: Server 32000 successfully deleteapple in to the store
+2022-04-21 17:54:41,745 INFO Server [RMI TCP Connection(20)-192.168.50.131] Server 32000's store is{}
+2022-04-21 17:54:41,746 INFO Server [RMI TCP Connection(21)-192.168.50.131] Go: Server 32001 successfully deleteapple in to the store
+2022-04-21 17:54:41,746 INFO Server [RMI TCP Connection(21)-192.168.50.131] Server 32001's store is{}
+2022-04-21 17:54:41,752 INFO Server [RMI TCP Connection(22)-192.168.50.131] Go: Server 32002 successfully deleteapple in to the store
+2022-04-21 17:54:41,753 INFO Server [RMI TCP Connection(22)-192.168.50.131] Server 32002's store is{}
+2022-04-21 17:54:41,755 INFO Server [RMI TCP Connection(23)-192.168.50.131] Go: Server 32003 successfully deleteapple in to the store
+2022-04-21 17:54:41,756 INFO Server [RMI TCP Connection(23)-192.168.50.131] Server 32003's store is{}
+2022-04-21 17:54:41,758 INFO Server [RMI TCP Connection(24)-192.168.50.131] Go: Server 32004 successfully deleteapple in to the store
+2022-04-21 17:54:41,759 INFO Server [RMI TCP Connection(24)-192.168.50.131] Server 32004's store is{}
+2022-04-22 21:56:35,489 INFO Server [RMI TCP Connection(12)-192.168.50.131] Putting myuser with value 12345 into store
+2022-04-22 21:56:35,491 INFO Server [RMI TCP Connection(12)-192.168.50.131] Send register action to the coordinator
+2022-04-22 21:56:35,494 INFO Server [RMI TCP Connection(13)-192.168.50.131] ACK: Server 32000 has been acknowledged and added the new key myuser
+2022-04-22 21:56:35,496 INFO Server [RMI TCP Connection(14)-192.168.50.131] ACK: Server 32001 has been acknowledged and added the new key myuser
+2022-04-22 21:56:35,498 INFO Server [RMI TCP Connection(15)-192.168.50.131] ACK: Server 32002 has been acknowledged and added the new key myuser
+2022-04-22 21:56:35,500 INFO Server [RMI TCP Connection(16)-192.168.50.131] ACK: Server 32003 has been acknowledged and added the new key myuser
+2022-04-22 21:56:35,501 INFO Server [RMI TCP Connection(17)-192.168.50.131] ACK: Server 32004 has been acknowledged and added the new key myuser
+2022-04-22 21:56:35,503 INFO Server [RMI TCP Connection(13)-192.168.50.131] Go: Server 32000 successfully register myuser
+2022-04-22 21:56:35,504 INFO Server [RMI TCP Connection(14)-192.168.50.131] Go: Server 32001 successfully register myuser
+2022-04-22 21:56:35,505 INFO Server [RMI TCP Connection(15)-192.168.50.131] Go: Server 32002 successfully register myuser
+2022-04-22 21:56:35,506 INFO Server [RMI TCP Connection(16)-192.168.50.131] Go: Server 32003 successfully register myuser
+2022-04-22 21:56:35,506 INFO Server [RMI TCP Connection(17)-192.168.50.131] Go: Server 32004 successfully register myuser
