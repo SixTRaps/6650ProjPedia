@@ -19,6 +19,8 @@ public class SignUpPage implements ActionListener {
     JTextField portText = new JTextField(20);
 
     JButton loginButton = new JButton("submit");
+    JButton backButton = new JButton("back");
+
 
     public SignUpPage() {
 
@@ -37,9 +39,13 @@ public class SignUpPage implements ActionListener {
         portLabel.setBounds(230,250,80,25);
         portLabel.setForeground(Color.white);
         portText.setBounds(320,250,165,25);
-        loginButton.setBounds(330, 300, 80, 25);
+        loginButton.setBounds(400, 300, 80, 25);
+        backButton.setBounds(230, 300, 80, 25);
+
+
 
         loginButton.addActionListener(this);
+        backButton.addActionListener(this);
 
         panel.setLayout(null);
         panel.add(welcomeLabel);
@@ -50,6 +56,8 @@ public class SignUpPage implements ActionListener {
         panel.add(portLabel);
         panel.add(portText);
         panel.add(loginButton);
+        panel.add(backButton);
+
         frame.setContentPane(panel);
 
         frame.addBackground();
@@ -59,49 +67,56 @@ public class SignUpPage implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (userText.getText() == null || passwordText.getPassword() == null || portText.getText() == null) {
-            JOptionPane.showMessageDialog(null, "Field should not be empty", "alert", JOptionPane.ERROR_MESSAGE);
-        }
-        int port = -1;
-        try {
-            port = Integer.parseInt(portText.getText());
-        } catch (Exception err) {
-            JOptionPane.showMessageDialog(null, "Please enter correct port number", "alert", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-        if (port < 0) {
-            JOptionPane.showMessageDialog(null, "Please enter correct port number", "alert", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
+        if (e.getSource() == loginButton) {
 
-        String hostname = "127.0.0.1";
-        Registry registry = null;
-        RemoteUserInterface stub = null;
-        String username = userText.getText();
-        String password = String.valueOf(passwordText.getPassword());
-        String loginResponse = null;
-        try {
-            registry = LocateRegistry.getRegistry(hostname, port);
-            stub = (RemoteUserInterface) registry.lookup("PROJPEDIA");
-            loginResponse = stub.signup(username, password);
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Server connection failed", "alert", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
+            if (userText.getText() == null || passwordText.getPassword() == null || portText.getText() == null) {
+                JOptionPane.showMessageDialog(null, "Field should not be empty", "alert", JOptionPane.ERROR_MESSAGE);
+            }
+            int port = -1;
+            try {
+                port = Integer.parseInt(portText.getText());
+            } catch (Exception err) {
+                JOptionPane.showMessageDialog(null, "Please enter correct port number", "alert", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            if (port < 0) {
+                JOptionPane.showMessageDialog(null, "Please enter correct port number", "alert", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
 
-        if (loginResponse.equalsIgnoreCase("User already exit. No need for register")) {
-            JOptionPane.showMessageDialog(null, "User already exist. No need for register. Please login.", "alert", JOptionPane.ERROR_MESSAGE);
+            String hostname = "127.0.0.1";
+            Registry registry = null;
+            RemoteUserInterface stub = null;
+            String username = userText.getText();
+            String password = String.valueOf(passwordText.getPassword());
+            String loginResponse = null;
+            try {
+                registry = LocateRegistry.getRegistry(hostname, port);
+                stub = (RemoteUserInterface) registry.lookup("PROJPEDIA");
+                loginResponse = stub.signup(username, password);
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, "Server connection failed", "alert", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            if (loginResponse.equalsIgnoreCase("User already exit. No need for register")) {
+                JOptionPane.showMessageDialog(null, "User already exist. No need for register. Please login.", "alert", JOptionPane.ERROR_MESSAGE);
+                new WelcomePage();
+                frame.dispose();
+            }
+            else if (loginResponse.equalsIgnoreCase("Sign up successfully")) {
+                JOptionPane.showInternalMessageDialog(null,  "Signup successfully! Logging in...", "information", JOptionPane.INFORMATION_MESSAGE);
+                new MainPage(username, stub);
+                frame.dispose();
+            }
+            else {
+                JOptionPane.showMessageDialog(null, "Wrong username or password. Please enter and try again", "alert", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+        } else if (e.getSource() == backButton) {
+            frame.dispose();
             new WelcomePage();
-            frame.dispose();
         }
-        else if (loginResponse.equalsIgnoreCase("Sign up successfully")) {
-            JOptionPane.showInternalMessageDialog(null, "[" + System.currentTimeMillis() + "] " + "Signup successfully! Logging in...", "information", JOptionPane.INFORMATION_MESSAGE);
-            new MainPage(username, stub);
-            frame.dispose();
-        }
-        else {
-            JOptionPane.showMessageDialog(null, "[" + System.currentTimeMillis() + "] " + "Wrong username or password. Please enter and try again", "alert", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
+
     }
 }
