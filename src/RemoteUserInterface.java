@@ -32,11 +32,7 @@ public interface RemoteUserInterface extends Remote {
 
     boolean ableToEdit(String entryKey, String username) throws Exception;
 
-    void changeEditStatus(String entryKey, String username) throws Exception;
-
     String login(String userName, String userPwd) throws Exception;
 
     String signup(String userName, String userPwd) throws Exception;
-
-    String logout(String userName) throws Exception;
 }

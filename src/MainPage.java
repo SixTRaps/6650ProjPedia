@@ -174,7 +174,7 @@ public class MainPage implements ActionListener {
 //                    if (getResponse.equalsIgnoreCase() )
                     String submitResponse = stub.put(key, value);
                     if (submitResponse.equals("Fail")) {
-                        JOptionPane.showMessageDialog(null, "Adding new entry failed", "alert", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Adding new entry failed due to too many servers crash. Please restart server and client", "alert", JOptionPane.ERROR_MESSAGE);
                         return;
                     }
                     else {
@@ -204,82 +204,72 @@ public class MainPage implements ActionListener {
         }
         else if (e.getSource() == editButton) {
             String key = JOptionPane.showInputDialog(null, "The key of entry you want to edit");
+            JLabel editTitle = new JLabel();
+            JLabel editValueLabel = new JLabel("Content");
+            editValueLabel.setForeground(Color.white);
+            JTextArea editValueArea = new JTextArea();
             try {
-                if (stub.ableToEdit(key, username) == false) {
-                    JOptionPane.showMessageDialog(frameEdit, "Can not edit the content of entered key.");
-                } else {
-                    JLabel editTitle = new JLabel();
-                    JLabel editValueLabel = new JLabel("Content");
-                    editValueLabel.setForeground(Color.white);
-                    JTextArea editValueArea = new JTextArea();
-                    try {
-                        response = stub.get(key);
-                        if (response.equalsIgnoreCase("None")) {
-                            JOptionPane.showMessageDialog(null, "Entry not exists", "alert", JOptionPane.ERROR_MESSAGE);
+                response = stub.get(key);
+                if (response.equalsIgnoreCase("None")) {
+                    JOptionPane.showMessageDialog(null, "Entry not exists", "alert", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+                else {
+                    editTitle.setText(key);
+                    editTitle.setForeground(Color.white);
+                    editTitle.setFont(new Font("Serif", Font.BOLD, 30));
+                    editTitle.setBounds(40, 80, 600, 40);
+                    frameEdit.add(editTitle);
+
+                    editValueLabel.setBounds(40, 200, 120, 25);
+                    frameEdit.add(editValueLabel);
+
+                    editValueArea.setText(response);
+                    editValueArea.setBounds(140, 200, 500, 200);
+                    frameEdit.add(editValueArea);
+
+                    submitButton.setBounds(240, 420, 100, 25);
+                    submitButton.addActionListener(e1 -> {
+                        String value = editValueArea.getText();
+                        if (value == null || value.trim().length() == 0) {
+                            JOptionPane.showMessageDialog(null, "Field should not be empty", "alert", JOptionPane.ERROR_MESSAGE);
                             return;
                         }
-                        else {
-                            editTitle.setText(key);
-                            editTitle.setForeground(Color.white);
-                            editTitle.setFont(new Font("Serif", Font.BOLD, 30));
-                            editTitle.setBounds(40, 80, 600, 40);
-                            frameEdit.add(editTitle);
-
-                            editValueLabel.setBounds(40, 200, 120, 25);
-                            frameEdit.add(editValueLabel);
-
-                            editValueArea.setText(response);
-                            editValueArea.setBounds(140, 200, 500, 200);
-                            frameEdit.add(editValueArea);
-
-                            submitButton.setBounds(240, 420, 100, 25);
-                            submitButton.addActionListener(e1 -> {
-                                String value = editValueArea.getText();
-                                if (value == null || value.trim().length() == 0) {
-                                    JOptionPane.showMessageDialog(null, "Field should not be empty", "alert", JOptionPane.ERROR_MESSAGE);
-                                    return;
-                                }
-                                try {
-                                    String submitResponse = stub.put(key, value);
-                                    if (submitResponse.equals("Fail")) {
-                                        JOptionPane.showMessageDialog(null, "Edit entry failed", "alert", JOptionPane.ERROR_MESSAGE);
-                                        return;
-                                    }
-                                    else {
-                                        JOptionPane.showMessageDialog(null, "Edit entry Successful", "Success", JOptionPane.INFORMATION_MESSAGE);
-                                        frameAddNew.dispose();
-                                        frameEdit.dispose();
-                                        new MainPage(username, stub);
-                                        return;
-                                    }
-                                } catch (Exception err) {
-                                    JOptionPane.showMessageDialog(null, "Edit entry failed", "alert", JOptionPane.ERROR_MESSAGE);
-                                    err.printStackTrace();
-                                }
-                            });
-                            frameEdit.getContentPane().add(submitButton);
-
-                            backButton.setBounds(360, 420, 100, 24);
-                            backButton.addActionListener(e1 -> {
+                        try {
+                            String submitResponse = stub.put(key, value);
+                            if (submitResponse.equals("Fail")) {
+                                JOptionPane.showMessageDialog(null, "Edit entry failed due to too many servers crash. Please restart server and client", "alert", JOptionPane.ERROR_MESSAGE);
+                                return;
+                            }
+                            else {
+                                JOptionPane.showMessageDialog(null, "Edit entry Successful", "Success", JOptionPane.INFORMATION_MESSAGE);
+                                frameAddNew.dispose();
                                 frameEdit.dispose();
                                 new MainPage(username, stub);
-                            });
-                            frameEdit.getContentPane().add(backButton);
+                                return;
+                            }
+                        } catch (Exception err) {
+                            JOptionPane.showMessageDialog(null, "Edit entry failed", "alert", JOptionPane.ERROR_MESSAGE);
+                            err.printStackTrace();
                         }
-                    } catch (Exception err) {
-                        JOptionPane.showMessageDialog(null, "Fail to edit entry", "alert", JOptionPane.ERROR_MESSAGE);
-                        err.printStackTrace();
-                        return;
-                    }
-                    frameMain.dispose();
-                    frameEdit.addBackground();
-                    frameEdit.setVisible(true);
-                    stub.changeEditStatus(key, username);
-                }
-            } catch (Exception exception) {
-                exception.printStackTrace();
-            }
+                    });
+                    frameEdit.getContentPane().add(submitButton);
 
+                    backButton.setBounds(360, 420, 100, 24);
+                    backButton.addActionListener(e1 -> {
+                        frameEdit.dispose();
+                        new MainPage(username, stub);
+                    });
+                    frameEdit.getContentPane().add(backButton);
+                }
+            } catch (Exception err) {
+                JOptionPane.showMessageDialog(null, "Fail to edit entry", "alert", JOptionPane.ERROR_MESSAGE);
+                err.printStackTrace();
+                return;
+            }
+            frameMain.dispose();
+            frameEdit.addBackground();
+            frameEdit.setVisible(true);
         }
         else if (e.getSource() == deleteButton) {
             String[] options = {"PROCEED", "CANCEL"};
@@ -294,7 +284,7 @@ public class MainPage implements ActionListener {
                     return;
                 }
                 if (response.equals("Fail")) {
-                    JOptionPane.showMessageDialog(null, "Due to unknown reason, fail to delete the entry: " + key, "alert", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Fail to delete the entry: " + key + " due to too many servers crash. Please restart server and client", "alert", JOptionPane.ERROR_MESSAGE);
                 }
                 else if (response.equals("Success")) {
                     JOptionPane.showMessageDialog(null, "Successfully deleted the entry: " + key, "alert", JOptionPane.ERROR_MESSAGE);
@@ -302,21 +292,10 @@ public class MainPage implements ActionListener {
             }
         }
         else if (e.getSource() == logoutButton) {
-            try {
-                response = stub.logout(username);
-                if (response.equalsIgnoreCase("Logout successfully")) {
-                    frameMain.dispose();
-                    new WelcomePage();
-                }
-                else {
-                    JOptionPane.showMessageDialog(null, "Due to unknown reason, fail to log out.", "alert", JOptionPane.ERROR_MESSAGE);
-                    return;
-                }
-            } catch (Exception ex) {
-                JOptionPane.showMessageDialog(null, "Delete entry failed", "alert", JOptionPane.ERROR_MESSAGE);
-                return;
-            }
+            frameMain.dispose();
+            new WelcomePage();
         }
+
     }
 
 }
