@@ -209,12 +209,22 @@ public class MainPage implements ActionListener {
             editValueLabel.setForeground(Color.white);
             JTextArea editValueArea = new JTextArea();
             try {
+                if (key == null) {
+                    return;
+                }
+
                 response = stub.get(key);
                 if (response.equalsIgnoreCase("None")) {
                     JOptionPane.showMessageDialog(null, "Entry not exists", "alert", JOptionPane.ERROR_MESSAGE);
                     return;
                 }
                 else {
+                    if (!stub.ableToEdit(key)) {
+                        JOptionPane.showMessageDialog(null, "Someone is editting. Please wait.", "alert", JOptionPane.ERROR_MESSAGE);
+                        return;
+                    }
+                    stub.putToEdit(key);
+
                     editTitle.setText(key);
                     editTitle.setForeground(Color.white);
                     editTitle.setFont(new Font("Serif", Font.BOLD, 30));
@@ -230,6 +240,11 @@ public class MainPage implements ActionListener {
 
                     submitButton.setBounds(240, 420, 100, 25);
                     submitButton.addActionListener(e1 -> {
+                        try {
+                            stub.removeFromEdit(key);
+                        } catch (Exception ex) {
+                            ex.printStackTrace();
+                        }
                         String value = editValueArea.getText();
                         if (value == null || value.trim().length() == 0) {
                             JOptionPane.showMessageDialog(null, "Field should not be empty", "alert", JOptionPane.ERROR_MESSAGE);

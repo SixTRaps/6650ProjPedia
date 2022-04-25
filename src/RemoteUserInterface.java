@@ -30,7 +30,12 @@ public interface RemoteUserInterface extends Remote {
 
     Set<String> getEntryKeyList() throws Exception;
 
-    boolean ableToEdit(String entryKey, String username) throws Exception;
+    boolean ableToEdit(String entryKey) throws Exception;
+
+    void putToEdit(String key) throws Exception;
+
+    void removeFromEdit(String key) throws Exception;
+
 
     String login(String userName, String userPwd) throws Exception;
 

@@ -26,6 +26,8 @@ public class Server implements RemoteDevInterface, RemoteUserInterface {
     private Map<String, List<String>> pendingInfo = new HashMap<String, List<String>>();
     private Map<String, List<String>> pendingUserInfo = new HashMap<String, List<String>>();
 
+    public static HashSet<String> editSet = new HashSet<>();
+
     public Server(int port){
         this.port = port;
         loginStatus = false;
@@ -293,9 +295,28 @@ public class Server implements RemoteDevInterface, RemoteUserInterface {
     }
 
     @Override
-    public boolean ableToEdit(String entryKey, String username) {
-        return false;
+    public boolean ableToEdit(String entryKey) {
+        if (editSet.contains(entryKey)) {
+            return false;
+        } else {
+            return true;
+        }
     }
+    @Override
+    public void putToEdit(String key) throws Exception {
+
+        editSet.add(key);
+        System.out.println(editSet);
+    }
+
+    @Override
+    public void removeFromEdit(String key) throws Exception {
+
+        editSet.remove(key);
+        System.out.println(editSet);
+    }
+
+
 
     @Override
     public String get(String key) throws Exception {
@@ -635,38 +656,32 @@ public class Server implements RemoteDevInterface, RemoteUserInterface {
                 System.out.println("You can close the server you want to test fault tolerance");
                 System.out.println("Type one of the following choices: Close 0, Close 1, Close 2, Close 3, Close 4");
                 String action = input.nextLine();
-                switch (action) {
-                    case "Close 0" -> {
-                        UnicastRemoteObject.unexportObject(serverlist[0], true);
-                        System.out.println("You've close server 32000");
-                        Server.removeCoordinator();
-                    }
-                    case "Close 1" -> {
-                        UnicastRemoteObject.unexportObject(serverlist[1], true);
-                        System.out.println("You've close server 32001");
-                        Server.removeCoordinator();
-                    }
-                    case "Close 2" -> {
-                        UnicastRemoteObject.unexportObject(serverlist[2], true);
-                        System.out.println("You've close server 32002");
-                        Server.removeCoordinator();
-                    }
-                    case "Close 3" -> {
-                        UnicastRemoteObject.unexportObject(serverlist[3], true);
-                        System.out.println("You've close server 32003");
-                        Server.removeCoordinator();
-                    }
-                    case "Close 4" -> {
-                        UnicastRemoteObject.unexportObject(serverlist[4], true);
-                        System.out.println("You've close server 32004");
-                        Server.removeCoordinator();
-                    }
-                    default -> {
-                        System.out.println("Wrong input. Try again");
-                    }
 
+                if (action == "Close 0") {
+                    UnicastRemoteObject.unexportObject(serverlist[0], true);
+                    System.out.println("You've close server 32000");
+                    Server.removeCoordinator();
+                } else if (action == "Close 1") {
+                    UnicastRemoteObject.unexportObject(serverlist[1], true);
+                    System.out.println("You've close server 32001");
+                    Server.removeCoordinator();
+                } else if (action == "Close 2") {
+                    UnicastRemoteObject.unexportObject(serverlist[2], true);
+                    System.out.println("You've close server 32002");
+                    Server.removeCoordinator();
+                } else if (action == "Close 3") {
+                    UnicastRemoteObject.unexportObject(serverlist[3], true);
+                    System.out.println("You've close server 32003");
+                    Server.removeCoordinator();
+                } else if (action == "Close 4") {
+                    UnicastRemoteObject.unexportObject(serverlist[4], true);
+                    System.out.println("You've close server 32004");
+                    Server.removeCoordinator();
+                } else {
+                    System.out.println("Wrong input. Try again");
                 }
             }
+
 
 
 
